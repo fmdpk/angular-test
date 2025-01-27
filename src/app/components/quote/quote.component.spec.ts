@@ -17,7 +17,7 @@ describe('QuoteComponent', () => {
   });
 
   it('should create the component', () => {
-    expect(component).toBeTruthy();
+    expect(component).withContext('quote.component.spec - check if component is created').toBeTruthy();
   });
 
   it('should add a quote when the "Add Quote" button is clicked', () => {
@@ -25,8 +25,8 @@ describe('QuoteComponent', () => {
     addButton.click();
     fixture.detectChanges();
 
-    expect(component.quotes.length).toBe(1);
-    expect(component.quotes[0]).toBe('Quote 1');
+    expect(component.quotes.length).withContext('quote.component.spec - quote list should have one item').toBe(1);
+    expect(component.quotes[0]).withContext('quote.component.spec - quote item 0 should be Quote 1').toBe('Quote 1');
 
     const quoteCards = fixture.nativeElement.querySelectorAll('.quote-card');
     const quoteCard = fixture.debugElement.query(By.css('.quote-card'))
@@ -34,8 +34,8 @@ describe('QuoteComponent', () => {
     fixture.detectChanges();
 
     expect(quoteCards.length).toBe(1);
-    expect(component.quotes.length).toBe(0);
-    expect(quoteCards[0].textContent).toContain('Quote 1');
+    expect(component.quotes.length).withContext('quote.component.spec - quote list should be empty').toBe(0);
+    expect(quoteCards[0].textContent).withContext('quote.component.spec - text content of quote card should be Quote 1').toContain('Quote 1');
   });
 
   it('should remove a quote when a quote card is clicked', () => {
@@ -46,13 +46,13 @@ describe('QuoteComponent', () => {
     quoteCards[1].click();
     fixture.detectChanges();
 
-    expect(component.quotes.length).toBe(2);
-    expect(component.quotes).not.toContain('Quote 2');
+    expect(component.quotes.length).withContext('quote.component.spec - quote list should have two items').toBe(2);
+    expect(component.quotes).withContext('quote.component.spec - quote list should not have "Quote 2" item').not.toContain('Quote 2');
 
     const updatedQuoteCards = fixture.nativeElement.querySelectorAll('.quote-card');
     expect(updatedQuoteCards.length).toBe(2);
-    expect(updatedQuoteCards[0].textContent).toContain('Quote 1');
-    expect(updatedQuoteCards[1].textContent).toContain('Quote 3');
+    expect(updatedQuoteCards[0].textContent).withContext('quote.component.spec - text content of quote card 0 should be "Quote 1"').toContain('Quote 1');
+    expect(updatedQuoteCards[1].textContent).withContext('quote.component.spec - text content of quote card 1 should be "Quote 3"').toContain('Quote 3');
   });
 
   it('should not remove any quote if the list is empty', () => {
@@ -62,7 +62,7 @@ describe('QuoteComponent', () => {
     component.removeQuote(0);
     fixture.detectChanges();
 
-    expect(component.quotes.length).toBe(0);
+    expect(component.quotes.length).withContext('quote.component.spec - quote list should be empty').toBe(0);
   });
 
   it('should add multiple quotes in the correct order', () => {
@@ -73,6 +73,6 @@ describe('QuoteComponent', () => {
     addButton.click();
     fixture.detectChanges();
 
-    expect(component.quotes).toEqual(['Quote 1', 'Quote 2', 'Quote 3']);
+    expect(component.quotes).withContext("quote.component.spec - quote list should have three items: ['Quote 1', 'Quote 2', 'Quote 3']").toEqual(['Quote 1', 'Quote 2', 'Quote 3']);
   });
 });
