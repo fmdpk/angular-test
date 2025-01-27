@@ -5,11 +5,13 @@ import { RoutesModule } from './routes/routes/routes.module';
 
 import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/components/Quotes.component';
+import { QuoteComponent } from './components/quote/quote.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuotesComponent
+    QuotesComponent,
+    QuoteComponent
   ],
   imports: [
     BrowserModule,

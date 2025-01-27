@@ -8,7 +8,8 @@
         <div class="card-body">
           <div role="form">
             <div class="form-group col-8 offset-2">
-              <textarea #quote class="form-control" rows="3" cols="8" [(ngModel)]="quoteText" name="quoteText"></textarea>
+              <textarea #quote class="form-control" rows="3" cols="8" [(ngModel)]="quoteText"
+                name="quoteText"></textarea>
             </div>
             <div class="form-group text-center">
               <button class="btn btn-primary" (click)="createNewQuote()" [disabled]="quoteText == ''">Create a new
@@ -20,9 +21,9 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="card mb-3 col-5 list-card" id="quote-cards" style="max-width: 18rem;" *ngFor="let quote of quoteList; let i = index"
-      (click)="removeQuote(i)">
+  <div class="row card-parent">
+    <div class="card mb-3 col-5 list-card" id="quote-cards" style="max-width: 18rem;"
+      *ngFor="let quote of quoteList; let i = index" (click)="removeQuote(i)">
       <div class="card-body">
         <h6>{{ quote.text }}</h6>
       </div>

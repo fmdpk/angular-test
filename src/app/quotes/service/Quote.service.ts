@@ -9,7 +9,7 @@ export class QuoteService {
 
   private daysOfTheWeeks = ["Sun", "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat"];
 
-  constructor() {}
+  constructor() { }
 
   addNewQuote(quote: String) {
     const date = new Date();
@@ -17,7 +17,7 @@ export class QuoteService {
     const day = date.getDay();
     const year = date.getFullYear();
     this.quoteList.push(
-      new QuoteModel(quote, `${dayOfTheWeek} ${day}, ${year}`)
+      new QuoteModel(quote, `March 01 2025`)
     );
   }
 

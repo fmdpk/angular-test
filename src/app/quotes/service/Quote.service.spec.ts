@@ -9,8 +9,8 @@ describe("QuoteService", () => {
   });
 
   it("should create a post in an array", () => {
-    const qouteText = "This is my first post";
-    service.addNewQuote(qouteText);
+    const quoteText = "This is my first post";
+    service.addNewQuote(quoteText);
     expect(service.quoteList.length).toBeGreaterThanOrEqual(1);
   });
 
