@@ -9,6 +9,7 @@ import { QuoteComponent } from './components/quote/quote.component';
 import { MyComponent } from './components/my/my.component';
 import { TestComponent } from './components/test/test.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { TitleCasePipe } from './pipes/title-case.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     QuoteComponent,
     MyComponent,
     TestComponent,
-    HighlightDirective  
+    HighlightDirective,
+    TitleCasePipe  
   ],
   imports: [
     BrowserModule,
