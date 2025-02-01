@@ -10,6 +10,7 @@ import { MyComponent } from './components/my/my.component';
 import { TestComponent } from './components/test/test.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { TitleCasePipe } from './pipes/title-case.pipe';
+import { ReversePipe } from './pipes/reverse.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TitleCasePipe } from './pipes/title-case.pipe';
     MyComponent,
     TestComponent,
     HighlightDirective,
-    TitleCasePipe  
+    TitleCasePipe,
+    ReversePipe  
   ],
   imports: [
     BrowserModule,
