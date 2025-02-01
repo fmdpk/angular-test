@@ -15,4 +15,4 @@ const AppRoute: Routes = [
   declarations: [],
   exports: [RouterModule]
 })
-export class RoutesModule {}
+export class RoutesModule { }

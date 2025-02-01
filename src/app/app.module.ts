@@ -6,12 +6,18 @@ import { RoutesModule } from './routes/routes/routes.module';
 import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/components/Quotes.component';
 import { QuoteComponent } from './components/quote/quote.component';
+import { MyComponent } from './components/my/my.component';
+import { TestComponent } from './components/test/test.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuotesComponent,
-    QuoteComponent
+    QuoteComponent,
+    MyComponent,
+    TestComponent,
+    HighlightDirective  
   ],
   imports: [
     BrowserModule,
