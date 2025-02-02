@@ -11,6 +11,7 @@ import { TestComponent } from './components/test/test.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { TitleCasePipe } from './pipes/title-case.pipe';
 import { ReversePipe } from './pipes/reverse.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,14 +22,10 @@ import { ReversePipe } from './pipes/reverse.pipe';
     TestComponent,
     HighlightDirective,
     TitleCasePipe,
-    ReversePipe  
+    ReversePipe,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    RoutesModule
-  ],
+  imports: [BrowserModule, FormsModule, RoutesModule, BrowserAnimationsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
