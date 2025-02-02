@@ -1,18 +1,12 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { QuotesComponent } from "../../quotes/components/Quotes.component";
-import { RouterModule, Routes } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
 
-const AppRoute: Routes = [
-  {
-    path: "",
-    component: QuotesComponent
-  }
-];
+const AppRoute: Routes = [];
 
 @NgModule({
   imports: [CommonModule, RouterModule.forRoot(AppRoute)],
   declarations: [],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class RoutesModule { }
+export class RoutesModule {}
